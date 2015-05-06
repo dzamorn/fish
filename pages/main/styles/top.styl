@@ -1,0 +1,93 @@
+.top-block
+    background-color accent-color
+    opacity 0.9
+    color #fff
+    font-weight 900
+    font-size 13px
+    top 0
+    left 0
+    right 0
+    position fixed
+    z-index 100
+    box-shadow 0 0 5px rgba(0,0,0,0.5)
+    
+    a
+        color #fff
+        text-decoration none
+    
+    .section
+        display inline-block
+        vertical-align top
+        border-left 1px solid rgba(255, 255, 255, 0.2)
+        
+        &.link
+            height 35px
+            padding-top 15px
+            padding-left 20px
+            padding-right 20px
+            text-transform uppercase
+            
+            &:hover
+                background-color rgba(255, 255, 255, 0.1)
+        
+        &:last-child
+            border-right 1px solid rgba(255, 255, 255, 0.2)
+        
+        &.phone
+            height 40px
+            padding-left 15px
+            padding-top 10px
+            padding-right 15px
+            font-size 14px
+            
+            .phone-image, .phone-content
+                display inline-block
+                vertical-align top
+            
+            .phone-content
+                padding-left 10px
+                padding-top 4px
+        
+        &.profile
+            padding-left 20px
+            padding-right 20px
+            padding-top 10px
+            height 40px
+            text-align center
+            line-height 14px
+            
+            .profile-top
+                font-size 11px
+            
+            &:hover
+                background-color rgba(255, 255, 255, 0.1)
+        
+        &.cart
+            padding-left 15px
+            padding-right 20px
+            padding-top 5px
+            height 45px
+            
+            &:hover
+                background-color rgba(255, 255, 255, 0.1)
+            
+            .cart-image, .cart-total, .cart-link
+                display inline-block
+                vertical-align top
+            
+            .cart-image
+                margin-top 7px
+                margin-right 15px
+            
+            .cart-total
+                font-size 12px
+                line-height 13px
+                padding-top 7px
+                margin-right 15px
+            
+            .cart-link
+                text-align center
+                padding-top 6px
+                line-height 14px
+                &-top
+                    font-size 11px

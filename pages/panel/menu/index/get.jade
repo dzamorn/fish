@@ -1,0 +1,33 @@
+>/panel/base
+
+block bread
+    li Меню
+
+block content
+    h1 Меню
+    .buttons-block
+        a(href="/panel/menu/add/").btn.btn-success
+            i.glyphicon.glyphicon-plus
+            span Добавить пункт меню
+    table.table.table-bordered
+        thead
+            tr
+                th Название
+                th Адрес
+                th Приоритет
+                th.thin
+                th.thin
+        tbody
+            for item in menu
+                tr
+                    td= item.title
+                    td= item.url
+                    td= item.priority
+                    td
+                        a(href="/panel/menu/#{item._id}/edit/").btn.btn-primary.btn-sm Редактировать
+                    td
+                        a(href="/panel/menu/#{item._id}/remove/").btn.btn-danger.btn-sm Удалить
+            else
+                tr
+                    td(colspan=4)
+                        | Ни одного пункта меню не добавлено.

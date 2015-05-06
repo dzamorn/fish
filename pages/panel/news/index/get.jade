@@ -1,0 +1,30 @@
+>/panel/base
+
+block bread
+    li Новости
+
+block content
+    h1 Новости
+    .buttons-block
+        a(href="/panel/news/add/").btn.btn-success
+            i.glyphicon.glyphicon-plus
+            span Добавить новость
+    table.table.table-bordered
+        tead
+            tr
+                th Название
+                th Дата
+                th.thin
+                th.thin
+        tbody
+            for item in news
+                tr
+                    td= item.title
+                    td= item.date
+                    td
+                        a(href="/panel/news/#{item._id}/edit/").btn.btn-primary.btn-sm Редактировать
+                    td
+                        a(href="/panel/news/#{item._id}/remove/").btn.btn-danger.btn-sm Удалить
+            else
+                tr
+                    td(colspan=4) Ни одной новости не добавлено.

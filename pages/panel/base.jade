@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+    script(src="http://tinymce.cachefly.net/4.1/tinymce.min.js")
+    title Document
+body
+    .nav-block
+        .btn-group.btn-group-vertical(style="width: 100%")
+            a.btn.btn-primary(href="/panel/menu/" style="border-radius: 4px 4px 0 0") Меню
+            a.btn.btn-primary(href="/panel/news/") Новости
+            a.btn.btn-primary(href="/panel/sections/") Товары
+            a.btn.btn-primary(href="/panel/pages/") Страницы
+            a.btn.btn-primary(href="/panel/reviews/") Отзывы
+    .content-block
+        ol.breadcrumb
+            li: a(href="/") Главная
+            li: a(href="/panel/") Панель управления
+            block bread
+        block content
+        .footer.breadcrumb
+            | © 2015, 
+            a(href="http://it-comps.ru") IT-CompS
+    script.
+        tinymce.init({
+            selector: '.text-editor',
+            language_url : '/tinymce/langs/ru.js'
+        });

@@ -1,0 +1,12 @@
+.left-block
+    .sections
+        for section in mainSections
+            a(href="/catalog/section/#{section.id}/").section
+                | #{section.title}
+                img(src="/img/right.png")
+    
+    .sections.second-sections
+        for item in secondMenu
+            a(href="#{item.url}").section
+                | #{item.title}
+                img(src="/img/right.png")

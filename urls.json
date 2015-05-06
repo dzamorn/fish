@@ -1,0 +1,82 @@
+{
+    "/": "main/index",
+    
+    "/auth/ : auth": {
+        "/login/": "login",
+        "/register/ : register": {
+            "/": "index",
+            "/success/": "success"
+        }
+    },
+    
+    "/restore/ : restore": {
+        "/": "index",
+        "/sended/": "sended",
+        "/fail/": "fail",
+        "/success/": "success"
+    },
+    
+    "/catalog/ : catalog": {
+        "/": "index",
+        "/section/#{sectionId}/": "section",
+        "/offer/#{offerId}/": "offer"
+    },
+    
+    "/cart/ : cart": {
+        "/": "index",
+        "/contacts/": "contacts",
+        "/confirm/": "confirm",
+        "/success/": "success"
+    },
+    
+    "/profile/ : profile": {
+        "/": "index",
+        "/personal/": "personal",
+        "/password/": "password",
+        "/orders/": "orders"
+    },
+    
+    "/panel/ : panel": {
+        "/": "index",
+        
+        "/menu/ : menu": {
+            "/": "index",
+            "/add/": "add",
+            "/${id}/remove/": "remove",
+            "/${id}/edit/": "edit"
+        },
+        
+        "/news/ : news": {
+            "/": "index",
+            "/add/": "add",
+            "/${id}/remove/": "remove",
+            "/${id}/edit/": "edit"
+        },
+        
+        "/sections/ : sections": {
+            "/": "index",
+            "/add-section/${parentId}/": "add-section",
+            "/edit-section/${id}/": "edit-section",
+            "/add-offer/${sectionId}/": "add-offer",
+            "/edit-offer/${id}/": "edit-offer",
+            "/remove-section/${id}/": "remove-section",
+            "/remove-offer/${id}/": "remove-offer"
+        },
+        
+        "/pages/ : pages": {
+            "/": "index",
+            "/add/": "add",
+            "/${id}/remove/": "remove",
+            "/${id}/edit/": "edit"
+        },
+        
+        "/reviews/ : reviews": {
+            "/": "index",
+            "/${id}/accept/": "accept",
+            "/${id}/decline/": "decline",
+            "/${id}/remove/": "remove"
+        }
+    },
+    
+    "*": "main/page"
+}

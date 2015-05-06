@@ -1,0 +1,25 @@
+>/panel/base
+
+block bread
+    li: a(href="/panel/news/") Новости
+    li Добавление новости
+
+block content
+    h1 Добавление новости
+    form(action="" method="post")
+        table.table.table-bordered
+            tr
+                td Заголовок:
+                td
+                    input(type="text" name="title").form-control
+            tr
+                td Краткое описание:
+                td
+                    textarea(name="description").form-control
+            tr
+                td Содержимое:
+                td
+                    textarea(name="content").text-editor
+        button.btn.btn-success
+            i.glyphicon.glyphicon-plus
+            span Добавить

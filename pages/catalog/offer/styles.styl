@@ -1,0 +1,103 @@
+h1
+    margin-bottom 0px
+.offer
+    vertical-align top
+    
+    &-description
+        color #777
+        margin-bottom 20px
+    
+    &-image
+        float left
+        width 300px
+        img
+            max-width 300px
+    
+    &-cart
+        vertical-align top
+        margin-left 50px
+        height 120px
+        border 1px #ddd solid
+        padding 50px
+        display inline-block
+        
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
+        box-shadow 0 0 20px rgba(0,0,0,0.5)
+        
+        &-unit
+            font-size 18px
+            color #555
+            line-height 14px
+        
+        &-price
+            font-weight 700
+            font-size 30px
+            margin-bottom 20px
+            
+            &__amount, &__suffix
+                display inline-block
+            
+            &__suffix
+                margin-left 10px
+                color #aaa
+                font-weight 300
+        
+        &-button
+            button
+                border none
+                background-color accent-color
+                background-image url('/img/cart.png')
+                background-repeat no-repeat
+                background-position 15px 12px
+                color #fff
+                border-radius 5px
+                padding 15px 22px
+                padding-left 55px
+                font-family 'Open Sans'
+                text-transform uppercase
+                font-size 13px
+                font-weight 900
+                cursor pointer
+                
+                &:hover
+                    background-color x-color
+        
+    &-content
+        margin-top 20px
+    
+        &-tabs
+            margin-bottom 20px
+            padding-bottom 5px
+            border-bottom 3px accent-color solid
+            
+            &__tab
+                margin-right 20px
+                cursor pointer
+                display inline-block
+                text-transform uppercase
+                color #aaa
+                font-weight 900
+                font-size 13px
+                
+                &.active
+                    color accent-color
+                    &:hover
+                        color accent-color
+                
+                &:hover
+                    color x-color
+        
+     &-details
+        vertical-align top
+        height 120px
+        border 1px #ddd solid
+        padding 50px
+        display inline-block
+        margin-left 20px
+        width 180px

@@ -1,0 +1,26 @@
+>/panel/base
+
+block bread
+    li Категории товаров
+
+block content
+    h1 Категории товаров
+    .buttons-block
+        a(href="/panel/sections/add-section/none/").btn.btn-success
+            i.glyphicon.glyphicon-plus
+            span Добавить категорию
+    table.table
+        thead
+            tr
+                th Название категории
+                th.thin
+        tbody
+            for section in sections
+                tr.info
+                    td.section-title
+                        a(href="/panel/sections/edit-section/#{section._id}/")= section.title
+                    td
+                        a(href="/panel/sections/remove-section/#{section._id}/").btn.btn-danger.btn-sm Удалить
+            else
+                tr
+                    td(colspan=3) Не добавлено ни одной категории.

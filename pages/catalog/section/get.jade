@@ -1,0 +1,22 @@
+>/main/base
+
+block content
+    h1 #{section.title}
+    if section.children.length
+        for child in section.children
+            a(href="/catalog/section/#{child.id}/").section-block
+                .image
+                    img(src="/img/sections/#{child.id}.jpg")
+                .title= child.title
+    if section.offers.length
+        if section.children.length
+            h2 Товары
+        for offer in section.offers
+            a(href="/catalog/offer/#{offer.id}/").offer-block
+                .image
+                    img(src="/img/offers/#{offer.id}.jpg")
+                .title= offer.title
+                .description= offer.description
+                .price #{offer.price} руб.
+                .unit
+                    | за #{offer.unit}

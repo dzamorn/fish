@@ -1,0 +1,1 @@
+require('sim').start(__dirname);

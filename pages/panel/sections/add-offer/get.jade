@@ -1,0 +1,39 @@
+>/panel/base
+
+block bread
+    li: a(href="/panel/sections/") Категории товаров
+    if section
+        li: a(href="/panel/sections/edit-section/#{section._id}/")= section.title
+    li Добавить товар
+
+block content
+    h1 Добавить товар
+    form(action="" method="post" enctype="multipart/form-data")
+        table.table.table-bordered
+            tr
+                td Название:
+                td
+                    input(type="text" name="title").form-control
+            tr
+                td Цена:
+                td
+                    input(type="number" name="price").form-control
+            tr
+                td Краткое описание:
+                td
+                    input(type="text" name="description").form-control
+            tr
+                td Единица продажи:
+                td
+                    input(type="text" name="unit").form-control
+            tr
+                td Изображение:
+                td
+                    input(type="file" name="image").form-control
+            tr
+                td Описание товара:
+                td
+                    textarea(name="content").text-editor
+        button.btn.btn-success
+            i.glyphicon.glyphicon-plus
+            span Добавить

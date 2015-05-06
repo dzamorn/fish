@@ -1,0 +1,23 @@
+>/panel/base
+
+block bread
+    li: a(href="/panel/sections/") Категории товаров
+    if parent
+        li: a(href="/panel/sections/edit-section/#{parent._id}/")= parent.title
+    li Добавить категорию
+
+block content
+    h1 Добавить категорию
+    form(action="" method="post" enctype="multipart/form-data")
+        table.table.table-bordered
+            tr
+                td Название:
+                td
+                    input(type="text" name="title").form-control
+            tr
+                td Изображение
+                td
+                    input(type="file" name="image").form-control
+        button.btn.btn-success
+            i.glyphicon.glyphicon-plus
+            span Добавить

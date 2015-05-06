@@ -1,0 +1,57 @@
+.left-block
+    padding-top 10px
+    float left
+    
+    .sections
+        width left-width
+        
+        &.second-sections
+            margin-top 20px
+            a
+                background-color #eee
+                border none
+                font-weight 700
+                font-size 13px
+                text-transform capitalize
+                margin-bottom 1px
+                border-radius 3px
+                
+                img
+                    display none
+                
+                // &:hover
+                background-color accent-color
+                color #fff
+        
+        a
+            display block
+            font-size 13px
+            padding 15px 20px
+            border-bottom 1px #ddd dotted
+            border-right 1px #ddd dotted
+            text-decoration none
+            color light-color
+            position relative
+            text-transform uppercase
+            font-weight 900
+            
+            transition-property background color
+            transition-duration 0.5s
+            
+            &:last-child
+                border-bottom none
+            
+            &:hover
+                color accent-color
+                background-color #eee
+                img
+                    right 25px
+            
+            img
+                position absolute
+                max-width 13px
+                right 10px
+                top 7px
+                opacity 0.7
+                transition-property right
+                transition-duration 1s

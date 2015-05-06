@@ -1,0 +1,67 @@
+>/panel/base
+
+block bread
+    li: a(href="/panel/sections/") Категории товаров
+    if parent
+        li: a(href="/panel/sections/edit-section/#{parent._id}/")= parent.title
+    li= section.title
+
+block content
+    h1= section.title
+    form(action="" method="post" enctype="multipart/form-data")
+        table.table.table-bordered
+            tr
+                td Название:
+                td
+                    input(type="text" name="title" value=section.title).form-control
+            tr
+                td Изображение
+                td
+                    img(src="/img/sections/#{section.id}.jpg" style="max-width: 100px;")
+                    br
+                    input(type="file" name="image").form-control
+            tr
+                td(colspan=2)
+                    button.btn.btn-primary Сохранить
+    h2 Подкатегории
+    .buttons-block
+        a(href="/panel/sections/add-section/#{section._id}/").btn.btn-success.btn-sm
+            i.glyphicon.glyphicon-plus
+            span Добавить подкатегорию
+    table.table
+        thead
+            tr
+                th Название категории
+                th.thin
+        tbody
+            for section in subsections
+                tr.info
+                    td.section-title
+                        a(href="/panel/sections/edit-section/#{section._id}/")= section.title
+                    td
+                        a(href="/panel/sections/remove-section/#{section._id}/").btn.btn-danger.btn-sm Удалить
+            else
+                tr
+                    td(colspan=3) Не добавлено ни одной подкатегории.
+    h2 Товары
+    .buttons-block
+        a(href="/panel/sections/add-offer/#{section._id}/").btn.btn-success.btn-sm
+            i.glyphicon.glyphicon-plus
+            span Добавить товар
+    table.table
+        thead
+            tr
+                th Название товара
+                th Цена
+                th.thin
+        tbody
+            for offer in offers
+                tr.success
+                    td.offer-title
+                        a(href="/panel/sections/edit-offer/#{offer._id}/")= offer.title
+                    td= offer.price
+                    td
+                        a(href="/panel/sections/remove-offer/#{offer._id}/").btn.btn-danger.btn-sm Удалить
+            else
+                tr
+                    td(colspan=3) Не добавлено ни одного товара.

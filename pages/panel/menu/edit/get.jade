@@ -1,0 +1,25 @@
+>/panel/base
+
+block bread
+    li: a(href="/panel/menu/") Меню
+    li Редактирование пункта меню
+
+block content
+    h1 Редактирование пункта меню
+    form(action="" method="post")
+        table.table.table-bordered
+            tr
+                td Название:
+                td
+                    input(type="text" name="title" value=item.title).form-control
+            tr
+                td Адрес:
+                td
+                    input(type="text" name="url" value=item.url).form-control
+            tr
+                td Приоритет:
+                td
+                    input(type="number" name="priority" value=item.priority).form-control
+        button.btn.btn-success
+            i.glyphicon.glyphicon-ok
+            span Сохранить

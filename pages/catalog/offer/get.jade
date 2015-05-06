@@ -1,0 +1,24 @@
+>/main/base
+
+block content
+    h1= offer.title
+    .offer-description= offer.description
+    .offer-block
+        .offer-image
+            img(src="/img/offers/#{offer.id}.jpg")
+        .offer-cart
+            .offer-cart-unit Цена за #{offer.unit}
+            .offer-cart-price
+                .offer-cart-price__amount= offer.price
+                .offer-cart-price__suffix  руб.
+            .offer-cart-button
+                button Добавить в корзину
+        .offer-details
+        br
+        br
+        .offer-content
+            .offer-content-tabs
+                .offer-content-tabs__tab.active Описание товара
+                .offer-content-tabs__tab Отзывы
+            .offer-content-body
+                .offer-content-body__content!= offer.content

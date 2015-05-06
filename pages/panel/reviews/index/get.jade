@@ -1,0 +1,30 @@
+>/panel/base
+
+block bread
+    li Отзывы
+
+block content
+    h1 Отзывы
+    table.table.table-bordered
+        thead
+            tr
+                th Отзыв
+                th Статус
+                th.thin
+                th.thin
+        tbody
+            for review in reviews
+                tr
+                    td= review.content
+                    td= review.status
+                    if review.status == 'Новый'
+                        td
+                            a(href="/panel/reviews/#{review._id}/accept/").btn.btn-success Опубликовать
+                        td
+                            a(href="/panel/reviews/#{review._id}/decline/").btn.btn-warning Отклонить
+                    else
+                        td(colspan=2)
+                            a(href="/panel/reviews/#{review._id}/remove/").btn.btn-danger Удалить
+            else
+                tr
+                    td(colspan=4) Ни одного отзыва не добавлено.

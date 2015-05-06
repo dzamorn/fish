@@ -1,0 +1,28 @@
+>/panel/base
+
+block bread
+    li Страницы
+
+block content
+    h1 Страницы
+    .buttons-block
+        a(href="/panel/pages/add/").btn.btn-success
+            .glyphicon.glyphicon-plus
+            span Добавить страницу
+    table.table.table-bordered
+        thead
+            tr
+                th Название
+                th Адрес
+                th.thin
+        tbody
+            for page in pages
+                tr
+                    td
+                        a(href="/panel/pages/#{page._id}/edit/")= page.title
+                    td= page.url
+                    td
+                        a(href="/panel/pages/#{page._id}/remove/").btn.btn-danger.btn-sm Удалить
+            else
+                tr
+                    td(colspan=3) Ни одной страницы не добавлено.

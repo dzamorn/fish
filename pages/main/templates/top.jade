@@ -1,0 +1,21 @@
+.top-block
+    .container
+        for item in mainMenu
+            a.section.link(href="#{item.url}")= item.title
+        
+        .section.phone
+            img.phone-image(src="/img/phone.png")
+            .phone-content +7 (495) 555-55-55
+            
+        a(href="javascript:void(0);").section.profile
+            .profile-top ВОЙТИ В
+            .profile-bottom ЛИЧНЫЙ КАБИНЕТ
+            
+        a(href="/cart/").section.cart
+            img(src="/img/cart.png").cart-image
+            .cart-total
+                .cart-total-offers 2 товара
+                .cart-total-amount на сумму 16 220 руб.
+            .cart-link
+                .cart-link-top ПЕРЕЙТИ В
+                .cart-link-bottom КОРЗИНУ

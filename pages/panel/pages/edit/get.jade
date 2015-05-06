@@ -1,0 +1,25 @@
+>/panel/base
+
+block bread
+    li: a(href="/panel/pages/") Страницы
+    li Редактирование страницы
+
+block content
+    h1 Редактирование страницы
+    form(action="" method="post")
+        table.table.table-bordered
+            tr
+                td Заголовок:
+                td
+                    input(type="text" name="title" value=page.title).form-control
+            tr
+                td Адрес:
+                td
+                    input(type="text" name="url" value=page.url).form-control
+            tr
+                td Содержимое:
+                td
+                    textarea(name="content").text-editor= page.content
+        button.btn.btn-primary
+            i.glyphicon.glyphicon-ok
+            span Сохранить
