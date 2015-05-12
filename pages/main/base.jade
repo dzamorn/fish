@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 html(lang="en")
-head
-    meta(charset="UTF-8")
-    title Document
-    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic")
-    script(src="http://code.jquery.com/jquery.min.js")
-body
-    include templates/top
-    include templates/header
-    .container
-        include templates/left
-        include templates/content
-    include templates/footer
-    script(src="/js/app.js")
+    head
+        meta(charset="UTF-8")
+        title
+            block title
+            |  - Интернет-магазин морепродуктов Рыбовъ
+        link(rel="stylesheet", href="/bootstrap/css/bootstrap.css")
+        link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic")
+        link(rel="stylesheet" href="/lightbox/css/lightbox.css")
+        script(src="http://code.jquery.com/jquery.min.js")
+        script(src="/js/lib/angular.min.js")
+        script(src="/lightbox/js/lightbox.min.js")
+        script(src="http://underscorejs.org/underscore-min.js")
+        link(rel="icon" type="image/png" href="/img/favicon.png")
+        if user.isAuth
+            script.
+                IS_AUTH = true;
+        else
+            script.
+                IS_AUTH = false;
+    body(ng-app="app" ng-controller="MainController")
+        include templates/top
+        include templates/header
+        .container
+            include templates/left
+            include templates/content
+        include templates/footer
+        if !user.isAuth
+            include templates/auth
+        script(src="/js/app.js")
+        script(src="/js/cart.js")

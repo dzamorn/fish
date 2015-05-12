@@ -1,0 +1,64 @@
+>/panel/base
+
+block title
+    | Заказ ##{order.id}
+
+block bread
+    li: a(href="/panel/orders/") Заказы
+    li.active Заказ ##{order.id}
+
+block content
+    h1 Заказ ##{order.id}
+    h2 Детали заказа
+    table.table.table-striped.contacts-table
+        tr
+            td Пользователь:
+            td= order.user
+        tr
+            td Дата и время заказа:
+            td= order.date
+        tr
+            td Сумма заказа:
+            td #{order.total} #{order.total.rub()}
+        tr
+            td Количество товаров:
+            td #{order.count}
+        tr
+            td Статус:
+            td
+                form(action="" method="post")
+                    select(name="status").form-control
+                        option(value="Обрабатывается" selected=order.status==='Обрабатывается') Обрабатывается
+                        option(value="Отклонен" selected=order.status==='Отклонен') Отклонен
+                        option(value="Обработан" selected=order.status==='Обработан') Обработан
+                        option(value="Выдан" selected=order.status==='Выдан') Выдан
+                    br
+                    button.btn.btn-primary.btn-sm
+                        i.glyphicon.glyphicon-ok
+                        span Сохранить
+    h2 Заказанные товары
+    table.table.table-striped
+        thead
+            tr
+                th Артикул
+                th Наименование
+                th Цена
+                th Количество
+                th Сумма
+        tbody
+            - total = 0
+            for offer in order.offers
+                - total += offer.price * offer.count
+                tr
+                    td= offer.id
+                    td
+                        a(href="/catalog/offer/#{offer.id}/" target="_blank")= offer.title
+                    td #{offer.price} #{offer.price.rub()}
+                    td= offer.count
+                    td #{offer.price * offer.count} #{(offer.price * offer.count).rub()}
+            tr
+                th(colspan=4) Итого:
+                th #{total} #{total.rub()}
+    a(href="/panel/orders/#{order._id}/remove/").btn.btn-danger
+        i.glyphicon.glyphicon-remove
+        span Удалить заказ

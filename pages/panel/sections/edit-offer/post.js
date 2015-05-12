@@ -9,7 +9,7 @@ offer.price = post.price;
 offer.unit = post.unit;
 offer.description = post.description;
 offer.content = post.content;
-if (post.files.image) {
+if (post.files.image && post.files.image.exists) {
     fs.writeFileSync(__root + '/static/img/offers/' + offer.id + '.jpg',
         fs.readFileSync(post.files.image.path));
 }

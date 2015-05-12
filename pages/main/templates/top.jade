@@ -5,17 +5,36 @@
         
         .section.phone
             img.phone-image(src="/img/phone.png")
-            .phone-content +7 (495) 555-55-55
+            .phone-content= options.phone
             
-        a(href="javascript:void(0);").section.profile
-            .profile-top ВОЙТИ В
-            .profile-bottom ЛИЧНЫЙ КАБИНЕТ
+        if user.isAuth
+            a.auth-required(href="/profile/").section.profile.profile-button
+                .profile-top Вы вошли как
+                .profile-bottom #{user.username}
+        else
+            a.auth-required(href="javascript:void(0);" data-redirect="/profile/").section.profile
+                .profile-top ВОЙТИ В
+                .profile-bottom ЛИЧНЫЙ КАБИНЕТ
             
         a(href="/cart/").section.cart
             img(src="/img/cart.png").cart-image
             .cart-total
-                .cart-total-offers 2 товара
-                .cart-total-amount на сумму 16 220 руб.
+                .cart-total-offers {{getOffersString()}}
+                .cart-total-amount на сумму {{getTotalString()}}
             .cart-link
                 .cart-link-top ПЕРЕЙТИ В
                 .cart-link-bottom КОРЗИНУ
+if user.isAuth
+    .profile-links
+        a(href="/profile/")
+            i.glyphicon.glyphicon-user
+            span Личный кабинет
+        a(href="/profile/orders/")
+            i.glyphicon.glyphicon-shopping-cart
+            span История заказов
+        a(href="/profile/password/")
+            i.glyphicon.glyphicon-lock
+            span Сменить пароль
+        a(href="/auth/logout/")
+            i.glyphicon.glyphicon-log-out
+            span Выйти

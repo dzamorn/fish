@@ -1,0 +1,38 @@
+>/panel/base
+
+block bread
+    li Параметры
+
+block content
+    h1 Параметры
+    form(action="" method="post")
+        h2 Контакты
+        table.table.table-bordered
+            tr
+                td(style="width: 300px") Телефон для контактов:
+                td
+                    input(type="text" name="phone" value="#{options.phone || ''}").form-control
+            tr
+                td E-mail для уведомлений:
+                td
+                    input(type="text" name="email" value="#{options.email || ''}").form-control
+        h2 Главная страница
+        table.table.table-bordered
+            tr
+                td(style="width: 300px") Отображать выбранные товары:
+                td
+                    input(type="checkbox" name="showCustom" checked=options.showCustom)
+        table.table.table-bordered
+            tr
+                td(style="width: 300px") Отображать случайные категории:
+                td
+                    input(type="checkbox" name="showRandom" checked=options.showRandom)
+            tr
+                td Количество случайных категорий:
+                td
+                    input(type="number" name="randomSectionsCount" value=options.randomSectionsCount).form-control
+            tr
+                td Количество случайных товаров в каждой категории:
+                td
+                    input(type="number" name="randomOffersCount" value=options.randomOffersCount).form-control
+        button.btn.btn-primary Сохранить

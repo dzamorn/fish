@@ -6,6 +6,15 @@ exports.user = function (context, callback) {
 	callback(context);
 };
 
+exports.options = function (context, callback) {
+    lists.options.get({
+        root: true
+    }, function (options) {
+        context.options = options;
+        callback(context);
+    });
+};
+
 exports.sections = function (context, callback) {
     lists.sections.filter({
         parent: 'none'
@@ -22,13 +31,9 @@ exports.menu = function (context, callback) {
     });
 };
 
-exports.secondMenu = function (context, callback) {
-    context.secondMenu = [
-        { url: '', title: 'Вход' },
-        { url: '', title: 'Регистрация' },
-        { url: '', title: 'Информация для покупателей' },
-        { url: '', title: 'Доставка и оплата' },
-        { url: '', title: 'Условия сотрудничества' }
-    ];
-    callback(context);
+exports.second = function (context, callback) {
+    lists.second.all(function (menuItems) {
+        context.secondMenu = menuItems;
+        callback(context);
+    });
 };

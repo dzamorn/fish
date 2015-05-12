@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+    meta(charset="UTF-8")
+body
+    script.
+        var url = localStorage.getItem('auth-redirect');
+        localStorage.setItem('auth-redirect', '');
+        if (typeof url === 'string' && url.trim().length > 0) {
+            window.open(url, '_top');
+        } else {
+            window.open('/', '_top');
+        }

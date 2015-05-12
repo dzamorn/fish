@@ -1,4 +1,33 @@
 >/main/base
 
+block title
+    | Смена пароля
+
+block bread
+    li: a(href="/") Личный кабинет
+    li Смена пароля
+
 block content
-    h1 PROFILE PASSWORD
+    h1 Изменение пароля
+    if error
+        .invalid= error
+    if success
+        .success Пароль успешно изменен.
+        br
+    form(action="" method="post")
+        table.table
+            tr
+                td Текущий пароль:
+                td
+                    input(type="password" name="currentPassword").form-control
+            tr
+                td Новый пароль:
+                td
+                    input(type="password" name="password1").form-control
+            tr
+                td Новый пароль (еще раз):
+                td
+                    input(type="password" name="password2").form-control
+        button.btn.btn-primary
+            i.glyphicon.glyphicon-ok
+            span Сохранить

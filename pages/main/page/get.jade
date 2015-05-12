@@ -1,5 +1,11 @@
 >/main/base
 
+block title
+    | #{page.title}
+
+block bread
+    li= page.title
+
 block content
     h1= page.title
     div!= page.content

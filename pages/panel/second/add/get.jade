@@ -1,0 +1,25 @@
+>/panel/base
+
+block bread
+    li: a(href="/panel/second/") Второе меню
+    li Добавление пункта меню
+
+block content
+    h1 Добавление пункта меню
+    form(action="" method="post")
+        table.table.table-bordered
+            tr
+                td Название:
+                td
+                    input(type="text" name="title").form-control
+            tr
+                td Адрес:
+                td
+                    input(type="text" name="url").form-control
+            tr
+                td Приоритет:
+                td
+                    input(type="number" name="priority").form-control
+        button.btn.btn-success
+            i.glyphicon.glyphicon-plus
+            span Добавить

@@ -1,0 +1,22 @@
+a(href="/catalog/offer/#{offer.id}/" ng-class="{ incart: isAdded(#{offer.id}) }").offer-block
+    .image
+        img(src="/img/offers/#{offer.id}.jpg")
+    .title= offer.title
+    .description= offer.description.split(',')[0]
+    .offer-footer
+        .price #{offer.price} руб.
+        .unit
+            | за #{offer.unit}
+    .button-block.cart-button(ng-class="{ active: isAdded(#{offer.id}) }")
+        button(ng-click="addOffer(#{offer.id}, #{offer.price}, '#{offer.title}')")
+            span(ng-hide="isAdded(#{offer.id})") #{offer.price} руб.<br>В корзину
+            span(ng-show="isAdded(#{offer.id})") #{offer.price} руб.<br>В корзине
+    script.
+        $('.button-block.cart-button').click(function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+        });
+        $('.button-block.cart-button button').click(function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+        });

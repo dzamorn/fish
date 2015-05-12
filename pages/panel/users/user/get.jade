@@ -1,0 +1,65 @@
+>/panel/base
+
+block bread
+    li: a(href="/panel/users/") Пользователи
+    li.active #{u.username}
+
+block content
+    h1 Пользователь #{u.username}
+    form(action="" method="post")
+        h2 Данные пользователя
+        table.table.table-striped.contacts-form
+            tr
+                td Имя пользователя:
+                td= u.username
+            tr
+                td Новый пароль:
+                td
+                    input(type="text" name="password").form-control
+            tr
+                td E-mail:
+                td
+                    input(type="text" name="email" value=u.email).form-control
+            tr
+                td Статус менеджера:
+                td
+                    input(type="checkbox" name="isStaff" checked=u.isStaff)
+            tr
+                td Статус администратора:
+                td
+                    input(type="checkbox" name="isAdmin" checked=u.isAdmin)
+        button.btn.btn-primary
+            i.glyphicon.glyphicon-ok
+            span Сохранить
+            
+        h2 Контактные данные
+        table.table.table-striped.contacts-form
+            tr
+                td Страна:
+                td
+                    input(type="text" name="country" value=u.country || '').form-control
+            tr
+                td Почтовый индекс:
+                td
+                    input(type="text" name="index" value=u.index || '').form-control
+            tr
+                td Регион:
+                td
+                    input(type="text" name="region" value=u.region || '').form-control
+            tr
+                td Населенный пункт:
+                td
+                    input(type="text" name="town" value=u.town || '').form-control
+            tr
+                td Адрес:
+                td
+                    input(type="text" name="address" value=u.address || '').form-control
+        button.btn.btn-primary
+            i.glyphicon.glyphicon-ok
+            span Сохранить
+        br
+        br
+        div
+            a(href="/panel/users/#{u._id}/remove/").btn.btn-danger
+                i.glyphicon.glyphicon-remove
+                span Удалить пользователя

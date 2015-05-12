@@ -6,6 +6,10 @@
                 img(src="/img/right.png")
     
     .sections.second-sections
+        if user.isStaff
+            a(href="/panel/").section
+                | Панель управления
+                img(src="/img/right.png")
         for item in secondMenu
             a(href="#{item.url}").section
                 | #{item.title}

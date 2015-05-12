@@ -1,0 +1,29 @@
+>/panel/base
+
+block bread
+    li Пользователи
+
+block content
+    h1 Пользователи
+    table.table.table-bordered
+        thead
+            tr
+                th Имя пользователя
+                th Дата регистрации
+                th E-mail
+                th Менеждер
+                th Администратор
+        tbody
+            for user in users
+                tr.user-link(data-url="/panel/users/#{user._id}/")
+                    td(style="font-weight: bold")= user.username
+                    td= user.registerDate
+                    td= user.email
+                    td
+                        input(type="checkbox" checked=user.isStaff disabled)
+                    td
+                        input(type="checkbox" checked=user.isAdmin disabled)
+    script.
+        $('.user-link').click(function () {
+            window.open($(this).attr('data-url'), '_top');
+        });

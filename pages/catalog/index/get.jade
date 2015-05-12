@@ -1,4 +1,15 @@
 >/main/base
 
+block title
+    | Каталог товаров
+
+block bread
+    li Каталог
+
 block content
-    h1 SHOP
+    h1 Каталог товаров
+    for child in sections
+        a(href="/catalog/section/#{child.id}/").section-block
+            .image
+                img(src="/img/sections/#{child.id}.jpg")
+            .title= child.title

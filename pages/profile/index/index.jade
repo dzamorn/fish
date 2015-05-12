@@ -1,4 +1,26 @@
 >/main/base
 
+block title
+    | Личный кабинет
+
+block bread
+    li Личный кабинет
+
 block content
-    h1 PROFILE
+    h1 Личный кабинет пользователя
+    .buttons-block
+        a(href="/profile/orders/").btn.btn-success
+            i.glyphicon.glyphicon-shopping-cart
+            span История заказов
+        a(href="/profile/password/").btn.btn-success
+            i.glyphicon.glyphicon-lock
+            span Сменить пароль
+        a(href="/profile/logout/").btn.btn-success
+            i.glyphicon.glyphicon-log-out
+            span Выйти
+    h2 Личные данные
+    form(action="" method="post")
+        include ../contacts-form
+        button.btn.btn-primary
+            i.glyphicon.glyphicon-ok
+            span Сохранить

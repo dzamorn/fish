@@ -1,13 +1,29 @@
 {
     "/": "main/index",
+    "/auth-redirect/": "main/auth-redirect",
     
     "/auth/ : auth": {
         "/login/": "login",
+        "/logout/": "logout",
         "/register/ : register": {
             "/": "index",
+            "/success/": "success",
+            "/confirm/": "confirm"
+        },
+        "/confirm/ : confirm": {
+            "/": "index",
+            "/error/": "error",
             "/success/": "success"
+        },
+        "/restore/ : restore": {
+            "/": "index",
+            "/sended/": "sended"
         }
     },
+    
+    "/reviews/": "reviews",
+    
+    "/search/": "search",
     
     "/restore/ : restore": {
         "/": "index",
@@ -18,8 +34,8 @@
     
     "/catalog/ : catalog": {
         "/": "index",
-        "/section/#{sectionId}/": "section",
-        "/offer/#{offerId}/": "offer"
+        "/section/#{id}/": "section",
+        "/offer/#{id}/": "offer"
     },
     
     "/cart/ : cart": {
@@ -33,17 +49,39 @@
         "/": "index",
         "/personal/": "personal",
         "/password/": "password",
-        "/orders/": "orders"
+        "/orders/": "orders",
+        "/orders/#{id}/": "orders/order"
     },
     
     "/panel/ : panel": {
         "/": "index",
+        
+        "/options/": "options",
+        
+        "/users/ : users": {
+            "/": "index",
+            "/${id}/": "user",
+            "/${id}/remove/": "remove"
+        },
         
         "/menu/ : menu": {
             "/": "index",
             "/add/": "add",
             "/${id}/remove/": "remove",
             "/${id}/edit/": "edit"
+        },
+        
+        "/second/ : second": {
+            "/": "index",
+            "/add/": "add",
+            "/${id}/remove/": "remove",
+            "/${id}/edit/": "edit"
+        },
+        
+        "/orders/ : orders": {
+            "/": "index",
+            "/${id}/": "order",
+            "/${id}/remove/": "remove"
         },
         
         "/news/ : news": {
@@ -75,6 +113,11 @@
             "/${id}/accept/": "accept",
             "/${id}/decline/": "decline",
             "/${id}/remove/": "remove"
+        },
+        
+        "/offers/ : offers": {
+            "/${id}/tomain/": "tomain",
+            "/${id}/frommain/": "frommain"
         }
     },
     

@@ -1,0 +1,135 @@
+.section-block
+    text-align center
+    display inline-block
+    height 120px
+    width 150px
+    margin-right 10px
+    margin-bottom 10px
+    vertical-align top
+    padding 20px
+    transition-property box-shadow
+    transition-duration 0.3s
+    border 1px #ddd dotted
+    
+    .title
+        font-size 15px
+        font-weight 700
+        color accent-color
+        text-decoration underline
+        line-height 15px
+        margin-top 10px
+    
+    &:hover
+        // border 1px #ddd solid
+        box-shadow 0 0 20px rgba(0,0,0,0.5)
+        border 1px #fff dotted
+        
+        .title
+            color x-color
+    
+    .image
+        img
+            max-width 130px
+
+.offer-block
+    text-align center
+    display inline-block
+    height 250px
+    width 200px
+    margin-right 10px
+    margin-bottom 10px
+    vertical-align top
+    padding 20px
+    text-decoration none
+    color #000
+    border 1px #ddd dotted
+    
+    transition-property box-shadow
+    transition-duration 0.3s
+    position relative
+    
+    .button-block
+        position absolute
+        left 50px
+        right 50px
+        bottom 25px
+        display none
+        
+        button
+            border none
+            background-color accent-color
+            background-repeat no-repeat
+            background-position 15px 12px
+            color #fff
+            border-radius 5px
+            padding 10px 17px
+            font-family 'Open Sans'
+            text-transform uppercase
+            font-size 12px
+            font-weight 900
+            cursor pointer
+            
+            &:active
+                position relative
+                top 2px
+        &.active
+            button
+                background-color x-color
+    
+    &.incart
+        .button-block
+            display block
+        .offer-footer
+            display none
+    
+    &:hover
+        // border 1px #ddd solid
+        box-shadow 0 0 20px rgba(0,0,0,0.5)
+        border 1px #fff dotted
+        text-decoration none
+        
+        .title
+            color x-color
+        
+        .button-block
+            display block
+        .offer-footer
+            display none
+    
+    .title
+        margin-top 15px
+        font-size 15px
+        font-weight 700
+        color accent-color
+        text-decoration underline
+        line-height 15px
+    
+    .image
+        padding-top 5px
+        img
+            max-width 130px
+            border-radius 20px
+            border 5px #eee solid
+    
+    .offer-footer
+        position absolute
+        bottom 30px
+        left 50px
+        right 50px
+    
+    .price
+        font-size 20px
+        font-weight 700
+        text-decoration none
+        margin-top 10px
+    
+    .description
+        margin-top 5px
+        font-size 14px
+        color #777
+    
+    .unit
+        font-size 14px
+    
+    .price, .unit
+        line-height 18px

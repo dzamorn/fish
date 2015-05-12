@@ -1,5 +1,11 @@
 >/main/base
 
+block title
+    | #{section.title}
+
+block bread
+    li= section.title
+
 block content
     h1 #{section.title}
     if section.children.length
@@ -12,11 +18,4 @@ block content
         if section.children.length
             h2 Товары
         for offer in section.offers
-            a(href="/catalog/offer/#{offer.id}/").offer-block
-                .image
-                    img(src="/img/offers/#{offer.id}.jpg")
-                .title= offer.title
-                .description= offer.description
-                .price #{offer.price} руб.
-                .unit
-                    | за #{offer.unit}
+            include offer

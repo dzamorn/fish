@@ -1,0 +1,22 @@
+>/panel/base
+
+block bread
+    li.active Заказы
+
+block content
+    h1 Заказы
+    table.table.table-striped
+        thead
+            tr
+                th Дата заказа
+                th Количество товаров
+                th Сумма
+                th Статус
+        tbody
+            for order in orders
+                tr
+                    td
+                        a(href="/panel/orders/#{order._id}/")= order.date
+                    td= order.count
+                    td #{order.total} #{order.total.rub()}
+                    td= order.status

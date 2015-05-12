@@ -1,24 +1,61 @@
 >/main/base
 
+block title
+    | #{offer.title}
+
+block bread
+    li: a(href="/catalog/section/#{section.id}/")= section.title
+    li.active= offer.title
+
 block content
     h1= offer.title
     .offer-description= offer.description
-    .offer-block
+    .offer
         .offer-image
-            img(src="/img/offers/#{offer.id}.jpg")
+            a(href="/img/offers/#{offer.id}.jpg" data-lightbox="offer")
+                img(src="/img/offers/#{offer.id}.jpg")
         .offer-cart
             .offer-cart-unit Цена за #{offer.unit}
             .offer-cart-price
                 .offer-cart-price__amount= offer.price
                 .offer-cart-price__suffix  руб.
-            .offer-cart-button
-                button Добавить в корзину
+            .offer-cart-button.cart-button(ng-class="{ active: isAdded(#{offer.id}) }")
+                button(ng-click="addOffer(#{offer.id}, #{offer.price}, '#{offer.title}')")
+                    span(ng-hide="isAdded(#{offer.id})") Добавить в корзину
+                    span(ng-show="isAdded(#{offer.id})") Добавлено в корзину
         .offer-details
         br
         br
-        .offer-content
-            .offer-content-tabs
-                .offer-content-tabs__tab.active Описание товара
-                .offer-content-tabs__tab Отзывы
-            .offer-content-body
-                .offer-content-body__content!= offer.content
+        if offer.content
+            .offer-content(ng-init="activeTab = 1;")
+                .offer-content-tabs
+                    .offer-content-tabs__tab(ng-class="{active: activeTab === 1}" ng-click="activeTab = 1")
+                        | Описание товара
+                    .offer-content-tabs__tab(ng-class="{active: activeTab === 2}" ng-click="activeTab = 2")
+                        | Отзывы
+                .offer-content-body(ng-show="activeTab === 1")
+                    .offer-content-body__content!= offer.content
+                .offer-content-body(ng-show="activeTab === 2")
+                    include ../../reviews/reviews
+                    h2 Добавить отзыв
+                    include ../../reviews/add-review
+                    br
+        else
+            .offer-content(ng-init="activeTab = 1;")
+                .offer-content-tabs
+                    .offer-content-tabs__tab(ng-class="{active: activeTab === 1}" ng-click="activeTab = 1")
+                        | Отзывы
+                .offer-content-body(ng-show="activeTab === 1")
+                    include ../../reviews/reviews
+                    h2 Добавить отзыв
+                    include ../../reviews/add-review
+                    br
+        if user.isStaff
+            if offer.onMain
+                .offer-buttons
+                    a(href="/panel/offers/#{offer._id}/frommain/").btn.btn-warning.btn-sm
+                        | Убрать с главной
+            else
+                .offer-buttons
+                    a(href="/panel/offers/#{offer._id}/tomain/").btn.btn-primary.btn-sm
+                        | Добавить на главную

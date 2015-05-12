@@ -12,6 +12,8 @@ h1
         width 300px
         img
             max-width 300px
+            border-radius 40px
+            border 5px #eee solid
     
     &-cart
         vertical-align top
@@ -65,7 +67,14 @@ h1
                 font-weight 900
                 cursor pointer
                 
+                &:active
+                    position relative
+                    top 2px
+                
                 &:hover
+                    background-color x-color
+            &.active
+                button
                     background-color x-color
         
     &-content
@@ -101,3 +110,4 @@ h1
         display inline-block
         margin-left 20px
         width 180px
+        display none

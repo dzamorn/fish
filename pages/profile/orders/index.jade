@@ -1,4 +1,29 @@
 >/main/base
 
+block title
+    | История заказов
+
+block bread
+    li: a(href="/") Личный кабинет
+    li История заказов
+
 block content
-    h1 PROFILE ORDERS
+    h1 История заказов
+    table.table.table-striped
+        thead
+            tr
+                th Дата заказа
+                th Кол-во товаров
+                th Сумма
+                th Статус
+        tbody
+            for order in orders
+                tr
+                    td
+                        a(href="/profile/orders/#{order.id}/")= order.date
+                    td #{order.count}
+                    td #{order.total.spacing()} #{order.total.rub()}
+                    td= order.status
+            else
+                tr
+                    td(colspan=4) Ни одного заказа не найдено.

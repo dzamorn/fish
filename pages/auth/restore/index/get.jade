@@ -1,0 +1,17 @@
+>/main/base
+
+block title
+    | Восстановление пароля
+
+block bread
+    li.active Восстановление пароля
+
+block content
+    h1 Восстановление пароля
+    if get.error === 'true'
+        .invalid Пользователь с таким электронным адресом не найден.
+    p Введите адрес электронной почты, указанный при регистрации:
+    form(action="" method="post")
+        input(type="text" name="email").form-control
+        br
+        button.btn.btn-primary Отправить

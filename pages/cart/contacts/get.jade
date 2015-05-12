@@ -1,4 +1,15 @@
 >/main/base
 
+block title
+    | Контактные данные
+
+block bread
+    li: a(href="/cart/") Корзина товаров
+    li.active Контактные данные
+
 block content
-    h1 CART CONTACTS
+    h1 Контактные данные заказчика
+    p Пожалуйста, введите свои контактные данные.
+    form(action="" method="post")
+        include ../../profile/contacts-form
+        button.btn.btn-primary Продолжить

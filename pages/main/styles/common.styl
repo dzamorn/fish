@@ -3,8 +3,83 @@ body
     padding-top 50px
     margin 0
     font-family 'Open Sans', 'Arial'
-    
+    padding-left 30px
+    padding-right 30px
+    font-size 14px
+    Padding-bottom 50px
+
+.invalid
+    font-size 12px
+    color red
+    margin-top 10px
+    margin-bottom 10px
+
 .container
-    width width
+    max-width 1500px
     margin-left auto
     margin-right auto
+
+a
+    color accent-color
+    &:hover
+        color x-color
+
+.btn
+    span
+        padding-left 5px
+
+.form-control
+    padding 5px
+    height auto
+
+.auth-black
+    z-index 5000
+    background-color rgba(0, 0, 0, 0.8)
+    top 0
+    right 0
+    bottom 0
+    left 0
+    position fixed
+    display none
+    
+    .auth-block
+        
+        h2
+            font-weight 600
+            font-size 18px
+            margin-bottom 40px
+        
+        width 700px
+        margin-left auto
+        margin-right auto
+        margin-top 100px
+        background-color #fff
+        padding 30px 50px 50px 50px
+        
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
+        
+        table
+            width 100%
+            td
+                text-align left
+                padding-right 25px
+                padding-bottom 5px
+                font-size 14px
+        
+        .login, .register
+            display inline-block
+            width 45%
+            vertical-align top
+        
+        .login
+            padding-right 25px
+        
+        .register
+            border-left 1px dotted #ccc
+            padding-left 40px

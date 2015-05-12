@@ -1,4 +1,16 @@
 >/main/base
 
+block title
+    | Интернет-магазин морепродуктов Рыбовъ
+
 block content
-    h1 INDEX
+    if custom.length
+        h2 Популярные товары
+        for offer in custom
+            include ../../catalog/section/offer
+    for section in sections
+        if section.offers.length
+            h2 #{section.title}
+            if section.offers.length
+                for offer in section.offers
+                    include ../../catalog/section/offer

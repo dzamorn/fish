@@ -1,0 +1,14 @@
+>/main/base
+
+block title
+    | Поиск по товарам
+
+block bread
+    li.active Поиск по товарам
+
+block content
+    h1 Поиск по товарам
+    for offer in page
+        include ../catalog/section/offer
+    else
+        p По Вашему запросу ни одного товара не найдено.

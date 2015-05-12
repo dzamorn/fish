@@ -1,4 +1,44 @@
 >/main/base
 
+block title
+    | Корзина товаров
+
+block bread
+    li Корзина товаров
+
+
 block content
-    h1 CART
+    .cartpage
+        h1 Корзина товаров
+        .cartpage-offers
+            table.table.table(ng-controller="CartController")
+                thead
+                    tr
+                        th Артикул
+                        th Наименование
+                        th Цена
+                        th Количество
+                        th Сумма
+                        th(style="width: 1px")
+                tbody
+                    tr(ng-repeat="offer in offers")
+                        td {{offer.id}}
+                        td
+                            a(href="/catalog/offer/{{offer.id}}/" target="_blank") {{offer.title}}
+                        td {{offer.price.spacing()}} {{offer.price.rub()}}
+                        td
+                            input(type="number" ng-model="offer.count" min="1" ng-change="save()")
+                        td {{(offer.price * offer.count).spacing()}} {{(offer.price * offer.count).rub()}}
+                        td
+                            button(ng-click="removeOffer(offer)").btn.btn-danger.btn-sm
+                                i.glyphicon.glyphicon-remove
+                    tr(ng-if="!offers.length")
+                        td(colspan=6) Ни одного товара не добавлено.
+            .cart-footer
+                .total
+                    span Общая сумма: 
+                    span.amount  {{getTotalString()}}
+                .buttons
+                    a.btn.btn-warning.auth-required(href="/cart/contacts/" data-redirect="/cart/contacts/")
+                        span Оформить заказ
+                        i.glyphicon.glyphicon-chevron-right

@@ -1,4 +1,22 @@
 >/main/base
 
+block title
+    | Вход
+
 block content
-    h1 LOGIN
+    h1 Вход
+    if get.error === '1'
+        .invalid Введено неверное имя пользователя или пароль.
+    form(action="" method="post")
+        table.table.table-striped.contacts-table
+            tr
+                td(style="width: 250px;") Имя пользователя:
+                td
+                    input(type="text" name="username" value=get.username).form-control
+            tr
+                td Пароль:
+                td
+                    input(type="password" name="password").form-control
+        button.btn.btn-primary
+            i.glyphicon.glyphicon-log-in
+            span Войти

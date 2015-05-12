@@ -1,4 +1,31 @@
 >/main/base
 
+block title
+    | Регистрация
+
 block content
-    h1 REGISTER
+    h1 Регистрация
+    .errors
+        for error in errors
+            .invalid= error
+    form(action="" method="post")
+        table.table.table-striped.contacts-table
+            tr
+                td(style="width: 250px;") Имя пользователя:
+                td
+                    input(type="text" name="username" value=get.username).form-control
+            tr
+                td E-mail:
+                td
+                    input(type="text" name="email" value=get.email).form-control
+            tr
+                td Пароль:
+                td
+                    input(type="password" name="password1").form-control
+            tr
+                td Пароль (еще раз):
+                td
+                    input(type="password" name="password2").form-control
+        button.btn.btn-success
+            i.glyphicon.glyphicon-plus
+            span Зарегистрировать

@@ -6,7 +6,7 @@ lists.sections.add({
 }, $next);
 
 > (section)
-if (post.files.image) {
+if (post.files.image && post.files.image.exists) {
     fs.writeFileSync(__root + '/static/img/sections/' + section.id + '.jpg',
         fs.readFileSync(post.files.image.path));
 }

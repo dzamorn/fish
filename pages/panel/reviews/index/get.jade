@@ -8,6 +8,7 @@ block content
     table.table.table-bordered
         thead
             tr
+                th Имя
                 th Отзыв
                 th Статус
                 th.thin
@@ -15,6 +16,7 @@ block content
         tbody
             for review in reviews
                 tr
+                    td= review.name
                     td= review.content
                     td= review.status
                     if review.status == 'Новый'

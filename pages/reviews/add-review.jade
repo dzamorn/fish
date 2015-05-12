@@ -1,0 +1,34 @@
+.add-review-block
+    table.table
+        tr
+            td Имя:
+            td
+                input(type="text" name="name").add-review-name.form-control
+        tr
+            td Отзыв:
+            td
+                textarea(name="content").add-review-content.form-control
+    button.btn.btn-success
+        i.glyphicon.glyphicon-plus
+        span Добавить отзыв
+.add-review-added
+    p Ваш отзыв добавлен успешно и в ближайшее время появится на сайте.
+if offer
+    script.
+        REVIEW_OFFER_ID = '#{offer._id}';
+else
+    script.
+        REVIEW_OFFER_ID = 'none';
+script.
+    $(function () {
+        $('.add-review-block button').click(function () {
+            server.reviews.addReview({
+                name: $('.add-review-block .add-review-name').val(),
+                content: $('.add-review-block .add-review-content').val(),
+                offer: REVIEW_OFFER_ID
+            }, function (offer) {
+                $('.add-review-block').hide();
+                $('.add-review-added').show();
+            });
+        });
+    });

@@ -10,7 +10,7 @@ lists.offers.add({
 }, $next);
 
 > (offer)
-if (post.files.image) {
+if (post.files.image && post.files.image.exists) {
     fs.writeFileSync(__root + '/static/img/offers/' + offer.id + '.jpg',
     fs.readFileSync(post.files.image.path));
 }

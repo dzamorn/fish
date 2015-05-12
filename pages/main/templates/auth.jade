@@ -1,0 +1,45 @@
+.auth-black
+    .auth-block
+        .login
+            h2 Вход
+            form(action="/auth/login/" method="post")
+                table
+                    tr
+                        td
+                            input(type="text" name="username" placeholder="Имя пользователя").form-control
+                    tr
+                        td
+                            input(type="password" name="password" placeholder="Пароль").form-control
+                br
+                button.btn.btn-primary
+                    i.glyphicon.glyphicon-log-in
+                    span Войти
+        .register
+            h2 Быстрая регистрация
+            form(action="/auth/register/" method="post")
+                table
+                    tr
+                        td
+                            input(type="text" name="username" placeholder="Имя пользователя").form-control
+                    tr
+                        td
+                            input(type="text" name="email" placeholder="E-mail").form-control
+                    tr
+                        td
+                            input(type="password" name="password1" placeholder="Пароль").form-control
+                    tr
+                        td
+                            input(type="password" name="password2" placeholder="Пароль (еще раз)").form-control
+                br
+                button.btn.btn-success
+                    i.glyphicon.glyphicon-plus
+                    span Зарегистрировать
+script.
+    $(function () {
+        $('.auth-block').click(function (event) {
+            event.stopPropagation();
+        });
+        $('.auth-black').click(function () {
+            $('.auth-black').fadeOut();
+        });
+    });

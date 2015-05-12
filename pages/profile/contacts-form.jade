@@ -1,0 +1,33 @@
+table.table.table-striped.contacts-table
+    tr
+        td Имя, Фамилия, Отчество:
+        td
+            input(type="text" name="fullName" value="#{user.fullName || ''}").form-control
+    tr
+        td E-mail:
+        td
+            input(type="text" name="email" value="#{user.email || ''}").form-control
+    tr
+        td Контактный телефон:
+        td
+            input(type="text" name="phone" value="#{user.phone || ''}").form-control
+    tr
+        td Почтовый индекс:
+        td
+            input(type="text" name="index" value="#{user.index || ''}").form-control
+    tr
+        td Страна:
+        td
+            input(type="text" name="country" value="#{user.country || ''}").form-control
+    tr
+        td Область/регион:
+        td
+            input(type="text" name="region" value="#{user.region || ''}").form-control
+    tr
+        td Населенный пункт
+        td
+            input(type="text" name="town" value="#{user.town || ''}").form-control
+    tr
+        td Адрес:
+        td
+            input(type="text" name="address" value="#{user.address || ''}").form-control
