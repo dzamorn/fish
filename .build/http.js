@@ -195,6 +195,7 @@ __gj__callback();
 			__root = '/home/teu/fish',
 			__dirname = '/home/teu/fish/pages/auth/login';
 		var redirectUrl = get.redirect;
+context.oldUser = user;
 sim.auth.login({
     response: response,
     username: post.username,
@@ -212,6 +213,26 @@ function __gj__step2(user) {
         });
         return;
     }
+    user.offers = user.offers || [];
+    _.each(context.oldUser.offers || [], function (oldOffer) {
+        var added = false;
+        _.each(user.offers, function (offer) {
+            if (+offer.id === +oldOffer.id) {
+                added = true;
+                offer.count += oldOffer.count;
+            }
+        });
+        if (!added) {
+            user.offers.push(oldOffer);
+        }
+    });
+    user.save(__gj__step3);
+}
+function __gj__step3() {
+    context.oldUser.offers = [];
+    context.oldUser.save(__gj__step4);
+}
+function __gj__step4() {
     if (redirectUrl) {
         redirect(redirectUrl);
         return;

@@ -1,4 +1,5 @@
 var redirectUrl = get.redirect;
+context.oldUser = user;
 sim.auth.login({
     response: response,
     username: post.username,
@@ -16,6 +17,26 @@ if (!user.confirmed) {
     });
     return;
 }
+user.offers = user.offers || [];
+_.each(context.oldUser.offers || [], function (oldOffer) {
+    var added = false;
+    _.each(user.offers, function (offer) {
+        if (+offer.id === +oldOffer.id) {
+            added = true;
+            offer.count += oldOffer.count;
+        }
+    });
+    if (!added) {
+        user.offers.push(oldOffer);
+    }
+});
+user.save($next);
+
+>
+context.oldUser.offers = [];
+context.oldUser.save($next);
+
+>
 if (redirectUrl) {
     redirect(redirectUrl);
     return;
