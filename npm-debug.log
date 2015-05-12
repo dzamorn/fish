@@ -1,0 +1,335 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.38
+4 verbose node symlink /usr/bin/node
+5 warn package.json fish@0.0.1 No description
+6 warn package.json fish@0.0.1 No repository field.
+7 verbose readDependencies using package.json deps
+8 verbose install where, deps [ '/home/teu/fish', [ 'underscore', 'sim', 'async' ] ]
+9 info preinstall fish@0.0.1
+10 verbose readDependencies using package.json deps
+11 verbose cache add [ 'underscore@*', null ]
+12 verbose cache add name=undefined spec="underscore@*" args=["underscore@*",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'underscore@*',
+13 verbose parsed url   path: 'underscore@*',
+13 verbose parsed url   href: 'underscore@*' }
+14 verbose cache add [ 'sim@*', null ]
+15 verbose cache add name=undefined spec="sim@*" args=["sim@*",null]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: 'sim@*',
+16 verbose parsed url   path: 'sim@*',
+16 verbose parsed url   href: 'sim@*' }
+17 verbose cache add [ 'async@*', null ]
+18 verbose cache add name=undefined spec="async@*" args=["async@*",null]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: 'async@*',
+19 verbose parsed url   path: 'async@*',
+19 verbose parsed url   href: 'async@*' }
+20 verbose cache add name="underscore" spec="*" args=["underscore","*"]
+21 verbose parsed url { protocol: null,
+21 verbose parsed url   slashes: null,
+21 verbose parsed url   auth: null,
+21 verbose parsed url   host: null,
+21 verbose parsed url   port: null,
+21 verbose parsed url   hostname: null,
+21 verbose parsed url   hash: null,
+21 verbose parsed url   search: null,
+21 verbose parsed url   query: null,
+21 verbose parsed url   pathname: '*',
+21 verbose parsed url   path: '*',
+21 verbose parsed url   href: '*' }
+22 verbose addNamed [ 'underscore', '*' ]
+23 verbose addNamed [ null, '*' ]
+24 verbose cache add name="sim" spec="*" args=["sim","*"]
+25 verbose parsed url { protocol: null,
+25 verbose parsed url   slashes: null,
+25 verbose parsed url   auth: null,
+25 verbose parsed url   host: null,
+25 verbose parsed url   port: null,
+25 verbose parsed url   hostname: null,
+25 verbose parsed url   hash: null,
+25 verbose parsed url   search: null,
+25 verbose parsed url   query: null,
+25 verbose parsed url   pathname: '*',
+25 verbose parsed url   path: '*',
+25 verbose parsed url   href: '*' }
+26 verbose addNamed [ 'sim', '*' ]
+27 verbose addNamed [ null, '*' ]
+28 verbose cache add name="async" spec="*" args=["async","*"]
+29 verbose parsed url { protocol: null,
+29 verbose parsed url   slashes: null,
+29 verbose parsed url   auth: null,
+29 verbose parsed url   host: null,
+29 verbose parsed url   port: null,
+29 verbose parsed url   hostname: null,
+29 verbose parsed url   hash: null,
+29 verbose parsed url   search: null,
+29 verbose parsed url   query: null,
+29 verbose parsed url   pathname: '*',
+29 verbose parsed url   path: '*',
+29 verbose parsed url   href: '*' }
+30 verbose addNamed [ 'async', '*' ]
+31 verbose addNamed [ null, '*' ]
+32 silly lockFile 67e8a6a2-underscore underscore@*
+33 verbose lock underscore@* /home/teu/.npm/67e8a6a2-underscore.lock
+34 silly lockFile 115ec725-sim sim@*
+35 verbose lock sim@* /home/teu/.npm/115ec725-sim.lock
+36 silly lockFile 827e99f9-async async@*
+37 verbose lock async@* /home/teu/.npm/827e99f9-async.lock
+38 silly addNameRange { name: 'underscore', range: '*', hasData: false }
+39 silly addNameRange { name: 'sim', range: '*', hasData: false }
+40 silly addNameRange { name: 'async', range: '*', hasData: false }
+41 verbose request where is /underscore
+42 verbose request registry https://registry.npmjs.org/
+43 verbose request id 76a3889cf815a378
+44 verbose url raw /underscore
+45 verbose url resolving [ 'https://registry.npmjs.org/', './underscore' ]
+46 verbose url resolved https://registry.npmjs.org/underscore
+47 verbose request where is https://registry.npmjs.org/underscore
+48 info trying registry request attempt 1 at 21:43:42
+49 http GET https://registry.npmjs.org/underscore
+50 verbose request where is /sim
+51 verbose request registry https://registry.npmjs.org/
+52 verbose url raw /sim
+53 verbose url resolving [ 'https://registry.npmjs.org/', './sim' ]
+54 verbose url resolved https://registry.npmjs.org/sim
+55 verbose request where is https://registry.npmjs.org/sim
+56 info trying registry request attempt 1 at 21:43:42
+57 http GET https://registry.npmjs.org/sim
+58 verbose request where is /async
+59 verbose request registry https://registry.npmjs.org/
+60 verbose url raw /async
+61 verbose url resolving [ 'https://registry.npmjs.org/', './async' ]
+62 verbose url resolved https://registry.npmjs.org/async
+63 verbose request where is https://registry.npmjs.org/async
+64 info trying registry request attempt 1 at 21:43:42
+65 verbose etag "Y5T3KFK8HQL45MS8G94XWXFA"
+66 http GET https://registry.npmjs.org/async
+67 http 304 https://registry.npmjs.org/async
+68 silly registry.get cb [ 304,
+68 silly registry.get   { date: 'Tue, 12 May 2015 01:43:42 GMT',
+68 silly registry.get     via: '1.1 varnish',
+68 silly registry.get     'cache-control': 'max-age=60',
+68 silly registry.get     etag: '"Y5T3KFK8HQL45MS8G94XWXFA"',
+68 silly registry.get     age: '60',
+68 silly registry.get     connection: 'keep-alive',
+68 silly registry.get     'x-served-by': 'cache-fra1236-FRA',
+68 silly registry.get     'x-cache': 'HIT',
+68 silly registry.get     'x-cache-hits': '2',
+68 silly registry.get     'x-timer': 'S1431395022.990958,VS0,VE0',
+68 silly registry.get     vary: 'Accept' } ]
+69 verbose etag https://registry.npmjs.org/async from cache
+70 silly addNameRange number 2 { name: 'async', range: '*', hasData: true }
+71 silly addNameRange versions [ 'async',
+71 silly addNameRange   [ '0.1.0',
+71 silly addNameRange     '0.1.1',
+71 silly addNameRange     '0.1.2',
+71 silly addNameRange     '0.1.3',
+71 silly addNameRange     '0.1.4',
+71 silly addNameRange     '0.1.5',
+71 silly addNameRange     '0.1.6',
+71 silly addNameRange     '0.1.7',
+71 silly addNameRange     '0.1.8',
+71 silly addNameRange     '0.1.9',
+71 silly addNameRange     '0.1.10',
+71 silly addNameRange     '0.1.11',
+71 silly addNameRange     '0.1.12',
+71 silly addNameRange     '0.1.13',
+71 silly addNameRange     '0.1.14',
+71 silly addNameRange     '0.1.15',
+71 silly addNameRange     '0.1.16',
+71 silly addNameRange     '0.1.17',
+71 silly addNameRange     '0.1.18',
+71 silly addNameRange     '0.1.19',
+71 silly addNameRange     '0.1.20',
+71 silly addNameRange     '0.1.21',
+71 silly addNameRange     '0.1.22',
+71 silly addNameRange     '0.2.0',
+71 silly addNameRange     '0.2.1',
+71 silly addNameRange     '0.2.2',
+71 silly addNameRange     '0.2.3',
+71 silly addNameRange     '0.2.4',
+71 silly addNameRange     '0.2.5',
+71 silly addNameRange     '0.2.6',
+71 silly addNameRange     '0.2.7',
+71 silly addNameRange     '0.2.8',
+71 silly addNameRange     '0.2.9',
+71 silly addNameRange     '0.2.10',
+71 silly addNameRange     '0.3.0',
+71 silly addNameRange     '0.4.0',
+71 silly addNameRange     '0.4.1',
+71 silly addNameRange     '0.5.0',
+71 silly addNameRange     '0.6.0',
+71 silly addNameRange     '0.6.1',
+71 silly addNameRange     '0.6.2',
+71 silly addNameRange     '0.7.0',
+71 silly addNameRange     '0.8.0',
+71 silly addNameRange     '0.9.0' ] ]
+72 verbose addNamed [ 'async', '0.9.0' ]
+73 verbose addNamed [ '0.9.0', '0.9.0' ]
+74 silly lockFile 9a58a886-async-0-9-0 async@0.9.0
+75 verbose lock async@0.9.0 /home/teu/.npm/9a58a886-async-0-9-0.lock
+76 silly lockFile 282f4be9--npmjs-org-async-async-0-9-0-tgz https://registry.npmjs.org/async/-/async-0.9.0.tgz
+77 verbose lock https://registry.npmjs.org/async/-/async-0.9.0.tgz /home/teu/.npm/282f4be9--npmjs-org-async-async-0-9-0-tgz.lock
+78 verbose addRemoteTarball [ 'https://registry.npmjs.org/async/-/async-0.9.0.tgz',
+78 verbose addRemoteTarball   'ac3613b1da9bed1b47510bb4651b8931e47146c7' ]
+79 info retry fetch attempt 1 at 21:43:43
+80 verbose fetch to= /tmp/npm-2805-GOdRGsCV/registry.npmjs.org/async/-/async-0.9.0.tgz
+81 http GET https://registry.npmjs.org/async/-/async-0.9.0.tgz
+82 http 200 https://registry.npmjs.org/underscore
+83 silly registry.get cb [ 200,
+83 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+83 silly registry.get     etag: '"8SXMDGGWIHHGAS6XTKZQDB565"',
+83 silly registry.get     'content-type': 'application/json',
+83 silly registry.get     'cache-control': 'max-age=60',
+83 silly registry.get     'content-length': '40580',
+83 silly registry.get     'accept-ranges': 'bytes',
+83 silly registry.get     date: 'Tue, 12 May 2015 01:43:42 GMT',
+83 silly registry.get     via: '1.1 varnish',
+83 silly registry.get     age: '37',
+83 silly registry.get     connection: 'keep-alive',
+83 silly registry.get     'x-served-by': 'cache-fra1227-FRA',
+83 silly registry.get     'x-cache': 'HIT',
+83 silly registry.get     'x-cache-hits': '2',
+83 silly registry.get     'x-timer': 'S1431395022.993101,VS0,VE0',
+83 silly registry.get     vary: 'Accept' } ]
+84 silly addNameRange number 2 { name: 'underscore', range: '*', hasData: true }
+85 silly addNameRange versions [ 'underscore',
+85 silly addNameRange   [ '1.0.3',
+85 silly addNameRange     '1.0.4',
+85 silly addNameRange     '1.1.0',
+85 silly addNameRange     '1.1.1',
+85 silly addNameRange     '1.1.2',
+85 silly addNameRange     '1.1.3',
+85 silly addNameRange     '1.1.4',
+85 silly addNameRange     '1.1.5',
+85 silly addNameRange     '1.1.6',
+85 silly addNameRange     '1.1.7',
+85 silly addNameRange     '1.2.0',
+85 silly addNameRange     '1.2.1',
+85 silly addNameRange     '1.2.2',
+85 silly addNameRange     '1.2.3',
+85 silly addNameRange     '1.2.4',
+85 silly addNameRange     '1.3.0',
+85 silly addNameRange     '1.3.1',
+85 silly addNameRange     '1.3.2',
+85 silly addNameRange     '1.3.3',
+85 silly addNameRange     '1.4.0',
+85 silly addNameRange     '1.4.1',
+85 silly addNameRange     '1.4.2',
+85 silly addNameRange     '1.4.3',
+85 silly addNameRange     '1.4.4',
+85 silly addNameRange     '1.5.0',
+85 silly addNameRange     '1.5.1',
+85 silly addNameRange     '1.5.2',
+85 silly addNameRange     '1.6.0',
+85 silly addNameRange     '1.7.0',
+85 silly addNameRange     '1.8.0',
+85 silly addNameRange     '1.8.1',
+85 silly addNameRange     '1.8.2',
+85 silly addNameRange     '1.8.3' ] ]
+86 verbose addNamed [ 'underscore', '1.8.3' ]
+87 verbose addNamed [ '1.8.3', '1.8.3' ]
+88 silly lockFile e5e32fca-underscore-1-8-3 underscore@1.8.3
+89 verbose lock underscore@1.8.3 /home/teu/.npm/e5e32fca-underscore-1-8-3.lock
+90 silly lockFile d5ea30aa--underscore-underscore-1-8-3-tgz https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz
+91 verbose lock https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz /home/teu/.npm/d5ea30aa--underscore-underscore-1-8-3-tgz.lock
+92 verbose addRemoteTarball [ 'https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz',
+92 verbose addRemoteTarball   '4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022' ]
+93 info retry fetch attempt 1 at 21:43:43
+94 verbose fetch to= /tmp/npm-2805-GOdRGsCV/registry.npmjs.org/underscore/-/underscore-1.8.3.tgz
+95 http GET https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz
+96 http 200 https://registry.npmjs.org/async/-/async-0.9.0.tgz
+97 silly lockFile 282f4be9--npmjs-org-async-async-0-9-0-tgz https://registry.npmjs.org/async/-/async-0.9.0.tgz
+98 silly lockFile 282f4be9--npmjs-org-async-async-0-9-0-tgz https://registry.npmjs.org/async/-/async-0.9.0.tgz
+99 silly lockFile 9a58a886-async-0-9-0 async@0.9.0
+100 silly lockFile 9a58a886-async-0-9-0 async@0.9.0
+101 silly lockFile 827e99f9-async async@*
+102 silly lockFile 827e99f9-async async@*
+103 http 200 https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz
+104 silly lockFile d5ea30aa--underscore-underscore-1-8-3-tgz https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz
+105 silly lockFile d5ea30aa--underscore-underscore-1-8-3-tgz https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz
+106 silly lockFile e5e32fca-underscore-1-8-3 underscore@1.8.3
+107 silly lockFile e5e32fca-underscore-1-8-3 underscore@1.8.3
+108 silly lockFile 67e8a6a2-underscore underscore@*
+109 silly lockFile 67e8a6a2-underscore underscore@*
+110 http 200 https://registry.npmjs.org/sim
+111 silly registry.get cb [ 200,
+111 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+111 silly registry.get     etag: '"5535PJSPTHFZK9QMJHY19LZTP"',
+111 silly registry.get     'content-type': 'application/json',
+111 silly registry.get     'cache-control': 'max-age=60',
+111 silly registry.get     'content-length': '40475',
+111 silly registry.get     'accept-ranges': 'bytes',
+111 silly registry.get     date: 'Tue, 12 May 2015 01:43:43 GMT',
+111 silly registry.get     via: '1.1 varnish',
+111 silly registry.get     age: '0',
+111 silly registry.get     connection: 'keep-alive',
+111 silly registry.get     'x-served-by': 'cache-fra1235-FRA',
+111 silly registry.get     'x-cache': 'MISS',
+111 silly registry.get     'x-cache-hits': '0',
+111 silly registry.get     'x-timer': 'S1431395022.995422,VS0,VE869',
+111 silly registry.get     vary: 'Accept' } ]
+112 silly addNameRange number 2 { name: 'sim', range: '*', hasData: true }
+113 silly addNameRange versions [ 'sim', [ '0.1.22', '0.1.23', '0.1.30', '0.2.0', '0.2.1' ] ]
+114 verbose addNamed [ 'sim', '0.2.1' ]
+115 verbose addNamed [ '0.2.1', '0.2.1' ]
+116 silly lockFile f0e5dad4-sim-0-2-1 sim@0.2.1
+117 verbose lock sim@0.2.1 /home/teu/.npm/f0e5dad4-sim-0-2-1.lock
+118 silly lockFile 67c15890-stry-npmjs-org-sim-sim-0-2-1-tgz https://registry.npmjs.org/sim/-/sim-0.2.1.tgz
+119 verbose lock https://registry.npmjs.org/sim/-/sim-0.2.1.tgz /home/teu/.npm/67c15890-stry-npmjs-org-sim-sim-0-2-1-tgz.lock
+120 verbose addRemoteTarball [ 'https://registry.npmjs.org/sim/-/sim-0.2.1.tgz',
+120 verbose addRemoteTarball   '66343f547708566143fe574a5a589a5273d0ef6b' ]
+121 info retry fetch attempt 1 at 21:43:43
+122 verbose fetch to= /tmp/npm-2805-GOdRGsCV/registry.npmjs.org/sim/-/sim-0.2.1.tgz
+123 http GET https://registry.npmjs.org/sim/-/sim-0.2.1.tgz
+124 http 200 https://registry.npmjs.org/sim/-/sim-0.2.1.tgz
+125 silly lockFile 67c15890-stry-npmjs-org-sim-sim-0-2-1-tgz https://registry.npmjs.org/sim/-/sim-0.2.1.tgz
+126 silly lockFile 67c15890-stry-npmjs-org-sim-sim-0-2-1-tgz https://registry.npmjs.org/sim/-/sim-0.2.1.tgz
+127 silly lockFile f0e5dad4-sim-0-2-1 sim@0.2.1
+128 silly lockFile f0e5dad4-sim-0-2-1 sim@0.2.1
+129 silly lockFile 115ec725-sim sim@*
+130 silly lockFile 115ec725-sim sim@*
+131 error Error: EACCES, mkdir '/home/teu/.npm/async/0.9.0'
+131 error  { [Error: EACCES, mkdir '/home/teu/.npm/async/0.9.0']
+131 error   errno: 3,
+131 error   code: 'EACCES',
+131 error   path: '/home/teu/.npm/async/0.9.0',
+131 error   parent: 'fish' }
+132 error Please try running this command again as root/Administrator.
+133 error System Linux 2.6.32-042stab104.1
+134 error command "/usr/bin/node" "/usr/bin/npm" "install"
+135 error cwd /home/teu/fish
+136 error node -v v0.10.38
+137 error npm -v 1.4.28
+138 error path /home/teu/.npm/async/0.9.0
+139 error code EACCES
+140 error errno 3
+141 error stack Error: EACCES, mkdir '/home/teu/.npm/async/0.9.0'
+142 verbose exit [ 3, true ]
