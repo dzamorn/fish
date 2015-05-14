@@ -44,6 +44,21 @@
     color #000
     border 1px #ddd dotted
     
+    @media(min-width: 1500px)
+        width 230px !important
+    @media(max-width: 1400px)
+        width 180px !important
+    @media(max-width: 1300px)
+        width 160px !important
+        height 220px
+        .title
+            font-size 14px !important
+        .description
+            font-size 13px !important
+        .image
+            img
+                max-width 100px !important
+    
     transition-property box-shadow
     transition-duration 0.3s
     position relative

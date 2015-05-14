@@ -79,33 +79,61 @@ $('.auth-required').click(function (event) {
     localStorage.setItem('auth-redirect', url);
 });
 
-$('.profile-button').click(function (event) {
-    var links = $('.profile-links'),
-        button = $(this);
-    if (links.css('display') === 'none') {
-        event.stopPropagation();
-    }
-    event.preventDefault();
-    links.css({
-        left: button.position().left
+(function () {
+    $('.profile-button').click(function (event) {
+        var links = $('.profile-links'),
+            button = $(this);
+        if (links.css('display') === 'none') {
+            event.stopPropagation();
+        }
+        event.preventDefault();
+        links.css({
+            left: button.position().left
+        });
+        button.addClass('active');
+        links.show();
     });
-    button.addClass('active');
-    links.show();
-});
-$(document).bind('click', function () {
-    var links = $('.profile-links'),
-        button = $('.profile-button');
-    links.hide();
-    button.removeClass('active');
-});
-$(window).resize(function () {
-    var links = $('.profile-links'),
-        button = $('.profile-button');
-    if (!IS_AUTH) { return; }
-    links.css({
-        left: button.position().left
+    $(document).bind('click', function () {
+        var links = $('.profile-links'),
+            button = $('.profile-button');
+        links.hide();
+        button.removeClass('active');
     });
-});
+    $(window).resize(function () {
+        var links = $('.profile-links'),
+            button = $('.profile-button');
+        if (!IS_AUTH) { return; }
+        links.css({
+            left: button.position().left
+        });
+    });
+}());
+
+(function () {
+    var links = $('.menu-links'),
+        button = $('.menu-link');
+    $('.menu-link').click(function (event) {
+        if (links.css('display') === 'none') {
+            event.stopPropagation();
+        }
+        event.preventDefault();
+        links.css({
+            left: button.position().left
+        });
+        button.addClass('active');
+        links.show();
+    });
+    $(document).bind('click', function () {
+        links.hide();
+        button.removeClass('active');
+    });
+    $(window).resize(function () {
+        if (!IS_AUTH) { return; }
+        links.css({
+            left: button.position().left
+        });
+    });
+}());
 
 Date.prototype.toString = function () {
     var months = [
