@@ -59,6 +59,32 @@ block content
             tr
                 th(colspan=4) Итого:
                 th #{total} #{total.rub()}
+    h2 Контактные данные
+    table.table.table-striped.contacts-table
+        tr
+            td Имя, Фамилия, Отчество:
+            td= u.fullName
+        tr
+            td E-mail:
+            td= u.email
+        tr
+            td Контактный телефон:
+            td= u.phone
+        tr
+            td Почтовый индекс:
+            td= u.index
+        tr
+            td Страна:
+            td= u.country
+        tr
+            td Область, регион:
+            td= u.region
+        tr
+            td Населенный пункт:
+            td= u.town
+        tr
+            td Адрес:
+            td= u.address
     a(href="/panel/orders/#{order._id}/remove/").btn.btn-danger
         i.glyphicon.glyphicon-remove
         span Удалить заказ
