@@ -37,3 +37,12 @@ exports.second = function (context, callback) {
         callback(context);
     });
 };
+
+exports.meta = function (context, callback) {
+    lists.meta.get({
+        name: 'meta'
+    }, function (meta) {
+        context.meta = meta || context;
+        callback(context);
+    });
+};

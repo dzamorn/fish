@@ -1,0 +1,20 @@
+>/panel/base
+
+block bread
+    li Ключевые слова
+
+block content
+    h1 Ключевые слова
+    form(action="" method="post")
+        table.table.table-bordered
+            tr
+                td Ключевые слова:
+                td
+                    textarea.form-control(name="keywords")= meta.keywords
+            tr
+                td Описание:
+                td
+                    textarea.form-control(name="description")= meta.description
+        button.btn.btn-primary
+            i.glyphicon.glyphicon-ok
+            span Сохранить

@@ -118,7 +118,9 @@
         "/offers/ : offers": {
             "/${id}/tomain/": "tomain",
             "/${id}/frommain/": "frommain"
-        }
+        },
+        
+        "/meta/": "meta"
     },
     
     "*": "main/page"
