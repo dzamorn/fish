@@ -15,8 +15,8 @@ exports['main/index'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/main/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/main/index';
 		var async = require('async');
 context.custom = [];
 context.sections = [];
@@ -117,8 +117,8 @@ exports['reviews'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/reviews';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/reviews';
 		lists.reviews.filter({
     offer: 'none',
     status: 'Опубликован'
@@ -142,8 +142,8 @@ exports['search'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/search';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/search';
 		context.search = get.search;
 lists.offers.page({
     search: get.search,
@@ -171,8 +171,8 @@ exports['auth/login'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/auth/login';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/auth/login';
 		context.get = get;
 var url = get.redirect || '/';
 if (user.isAuth) {
@@ -192,8 +192,8 @@ __gj__callback();
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/auth/login';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/auth/login';
 		var redirectUrl = get.redirect;
 context.oldUser = user;
 sim.auth.login({
@@ -253,8 +253,8 @@ exports['auth/logout'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/auth/logout';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/auth/logout';
 		sim.auth.logout(response, __gj__step2);
 
 function __gj__step2() {
@@ -274,8 +274,8 @@ exports['auth/register/index'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/auth/register/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/auth/register/index';
 		context.get = get;
 context.errors = [];
 _.each(get.errors.split(','), function (code) {
@@ -295,8 +295,8 @@ __gj__callback();
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/auth/register/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/auth/register/index';
 		var util = require('util');
 var async = require('async');
 sim.auth.register({
@@ -354,8 +354,8 @@ exports['auth/confirm/index'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/auth/confirm/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/auth/confirm/index';
 		lists.users.get({
     _id: get.key
 }, __gj__step2);
@@ -390,8 +390,8 @@ exports['auth/restore/index'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/auth/restore/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/auth/restore/index';
 		context.get = get;
 __gj__callback();
 	},
@@ -406,8 +406,8 @@ __gj__callback();
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/auth/restore/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/auth/restore/index';
 		lists.users.get({
     email: post.email
 }, __gj__step2);
@@ -463,8 +463,8 @@ exports['catalog/index'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/catalog/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/catalog/index';
 		lists.sections.filter({
     parent: 'none'
 }, __gj__step2);
@@ -487,8 +487,8 @@ exports['catalog/section'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/catalog/section';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/catalog/section';
 		lists.sections.get({
     id: url.id
 }, __gj__step2);
@@ -523,8 +523,8 @@ exports['catalog/offer'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/catalog/offer';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/catalog/offer';
 		lists.offers.get({
     id: url.id
 }, __gj__step2);
@@ -562,8 +562,8 @@ exports['cart/contacts'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/cart/contacts';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/cart/contacts';
 		user.fullName = post.fullName;
 user.email = post.email;
 user.phone = post.phone;
@@ -591,8 +591,8 @@ exports['cart/confirm'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/cart/confirm';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/cart/confirm';
 		__gj__callback();
 	},
 	post: function (options, __gj__callback) {
@@ -606,8 +606,8 @@ exports['cart/confirm'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/cart/confirm';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/cart/confirm';
 		_.each(user.offers, function (offer) {
     delete offer.$$hashKey;
 });
@@ -660,8 +660,8 @@ exports['cart/success'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/cart/success';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/cart/success';
 		lists.orders.get({
     id: +get.order
 }, __gj__step2);
@@ -692,8 +692,8 @@ exports['profile/index'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/profile/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/profile/index';
 		user.fullName = post.fullName;
 user.email = post.email;
 user.phone = post.phone;
@@ -723,8 +723,8 @@ exports['profile/password'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/profile/password';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/profile/password';
 		context.error = ['Неверно указан текущий пароль.', 'Введенный пароль слишком короткий.', 'Введенные пароли не совпадают.'][+get.error - 1];
 context.success = get.success === 'true';
 __gj__callback();
@@ -740,8 +740,8 @@ __gj__callback();
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/profile/password';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/profile/password';
 		if (!user.checkPassword(post.currentPassword)) {
     redirect('/profile/password/?error=1');
     return;
@@ -774,8 +774,8 @@ exports['profile/orders'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/profile/orders';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/profile/orders';
 		var async = require('async');
 lists.orders.filter({
     user: user.username
@@ -811,8 +811,8 @@ exports['profile/orders/order'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/profile/orders/order';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/profile/orders/order';
 		lists.orders.get({
     id: +url.id
 }, __gj__step2);
@@ -845,8 +845,8 @@ exports['panel/options'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/options';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/options';
 		lists.options.get({
     root: true
 }, __gj__step2);
@@ -867,8 +867,8 @@ function __gj__step2(options) {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/options';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/options';
 		lists.options.get({
     root: true
 }, __gj__step2);
@@ -899,8 +899,8 @@ exports['panel/users/index'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/users/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/users/index';
 		lists.users.filter({
     isAuth: true
 }, __gj__step2);
@@ -923,8 +923,8 @@ exports['panel/users/user'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/users/user';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/users/user';
 		lists.users.get({
     _id: url.id
 }, __gj__step2);
@@ -945,8 +945,8 @@ function __gj__step2(u) {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/users/user';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/users/user';
 		lists.users.get({
     _id: url.id
 }, __gj__step2);
@@ -982,8 +982,8 @@ exports['panel/users/remove'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/users/remove';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/users/remove';
 		lists.users.get({
     _id: url.id
 }, __gj__step2);
@@ -1008,8 +1008,8 @@ exports['panel/menu/index'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/menu/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/menu/index';
 		lists.menu.all(__gj__step2);
 
 function __gj__step2(menu) {
@@ -1030,8 +1030,8 @@ exports['panel/menu/add'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/menu/add';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/menu/add';
 		lists.menu.add({
     title: post.title,
     url: post.url,
@@ -1055,8 +1055,8 @@ exports['panel/menu/remove'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/menu/remove';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/menu/remove';
 		lists.menu.get({
     _id: url.id
 }, __gj__step2);
@@ -1081,8 +1081,8 @@ exports['panel/menu/edit'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/menu/edit';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/menu/edit';
 		lists.menu.get({
     _id: url.id
 }, __gj__step2);
@@ -1107,8 +1107,8 @@ function __gj__step2(item) {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/menu/edit';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/menu/edit';
 		lists.menu.get({
     _id: url.id
 }, __gj__step2);
@@ -1136,8 +1136,8 @@ exports['panel/second/index'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/second/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/second/index';
 		lists.second.all(__gj__step2);
 
 function __gj__step2(menu) {
@@ -1158,8 +1158,8 @@ exports['panel/second/add'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/second/add';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/second/add';
 		lists.second.add({
     title: post.title,
     url: post.url,
@@ -1183,8 +1183,8 @@ exports['panel/second/remove'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/second/remove';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/second/remove';
 		lists.second.get({
     _id: url.id
 }, __gj__step2);
@@ -1209,8 +1209,8 @@ exports['panel/second/edit'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/second/edit';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/second/edit';
 		lists.second.get({
     _id: url.id
 }, __gj__step2);
@@ -1235,8 +1235,8 @@ function __gj__step2(item) {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/second/edit';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/second/edit';
 		lists.second.get({
     _id: url.id
 }, __gj__step2);
@@ -1264,8 +1264,8 @@ exports['panel/orders/index'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/orders/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/orders/index';
 		var async = require('async');
 lists.orders.all(__gj__step2);
 
@@ -1305,8 +1305,8 @@ exports['panel/orders/order'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/orders/order';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/orders/order';
 		lists.orders.get({
     _id: url.id
 }, __gj__step2);
@@ -1341,8 +1341,8 @@ function __gj__step3(user) {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/orders/order';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/orders/order';
 		lists.orders.get({
     _id: url.id
 }, __gj__step2);
@@ -1368,8 +1368,8 @@ exports['panel/orders/remove'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/orders/remove';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/orders/remove';
 		lists.orders.get({
     _id: url.id
 }, __gj__step2);
@@ -1394,8 +1394,8 @@ exports['panel/news/index'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/news/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/news/index';
 		lists.news.all(__gj__step2);
 
 function __gj__step2(news) {
@@ -1416,8 +1416,8 @@ exports['panel/news/add'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/news/add';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/news/add';
 		lists.news.add({
     title: post.title,
     description: post.description,
@@ -1442,8 +1442,8 @@ exports['panel/news/remove'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/news/remove';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/news/remove';
 		lists.news.get({
     _id: url.id
 }, __gj__step2);
@@ -1468,8 +1468,8 @@ exports['panel/news/edit'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/news/edit';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/news/edit';
 		lists.news.get({
     _id: url.id
 }, __gj__step2);
@@ -1490,8 +1490,8 @@ function __gj__step2(item) {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/news/edit';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/news/edit';
 		lists.news.get({
     _id: url.id
 }, __gj__step2);
@@ -1519,8 +1519,8 @@ exports['panel/sections/index'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/sections/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/sections/index';
 		lists.sections.filter({
     parent: 'none'
 }, __gj__step2);
@@ -1543,8 +1543,8 @@ exports['panel/sections/add-section'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/sections/add-section';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/sections/add-section';
 		lists.sections.get({
     _id: url.parentId
 }, __gj__step2);
@@ -1565,8 +1565,8 @@ function __gj__step2(parent) {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/sections/add-section';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/sections/add-section';
 		var fs = require('fs');
 lists.sections.add({
     id: {
@@ -1600,8 +1600,8 @@ exports['panel/sections/edit-section'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/sections/edit-section';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/sections/edit-section';
 		lists.sections.get({
     _id: url.id
 }, __gj__step2);
@@ -1640,8 +1640,8 @@ function __gj__step5(offers) {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/sections/edit-section';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/sections/edit-section';
 		var fs = require('fs');
 lists.sections.get({
     _id: url.id
@@ -1671,8 +1671,8 @@ exports['panel/sections/add-offer'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/sections/add-offer';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/sections/add-offer';
 		lists.sections.get({
     _id: url.sectionId
 }, __gj__step2);
@@ -1693,8 +1693,8 @@ function __gj__step2(section) {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/sections/add-offer';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/sections/add-offer';
 		var fs = require('fs');
 lists.offers.add({
     id: {
@@ -1728,8 +1728,8 @@ exports['panel/sections/edit-offer'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/sections/edit-offer';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/sections/edit-offer';
 		lists.offers.get({
     _id: url.id
 }, __gj__step2);
@@ -1756,8 +1756,8 @@ function __gj__step3(section) {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/sections/edit-offer';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/sections/edit-offer';
 		var fs = require('fs');
 lists.offers.get({
     _id: url.id
@@ -1791,8 +1791,8 @@ exports['panel/sections/remove-section'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/sections/remove-section';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/sections/remove-section';
 		lists.sections.get({
     _id: url.id
 }, __gj__step2);
@@ -1822,8 +1822,8 @@ exports['panel/sections/remove-offer'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/sections/remove-offer';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/sections/remove-offer';
 		lists.offers.get({
     _id: url.id
 }, __gj__step2);
@@ -1849,8 +1849,8 @@ exports['panel/pages/index'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/pages/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/pages/index';
 		lists.pages.all(__gj__step2);
 
 function __gj__step2(pages) {
@@ -1871,8 +1871,8 @@ exports['panel/pages/add'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/pages/add';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/pages/add';
 		lists.pages.add({
     title: post.title,
     url: post.url,
@@ -1896,8 +1896,8 @@ exports['panel/pages/remove'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/pages/remove';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/pages/remove';
 		lists.pages.get({
     _id: url.id
 }, __gj__step2);
@@ -1922,8 +1922,8 @@ exports['panel/pages/edit'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/pages/edit';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/pages/edit';
 		lists.pages.get({
     _id: url.id
 }, __gj__step2);
@@ -1944,8 +1944,8 @@ function __gj__step2(page) {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/pages/edit';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/pages/edit';
 		lists.pages.get({
     _id: url.id
 }, __gj__step2);
@@ -1973,8 +1973,8 @@ exports['panel/reviews/index'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/reviews/index';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/reviews/index';
 		lists.reviews.all(__gj__step2);
 
 function __gj__step2(reviews) {
@@ -2003,8 +2003,8 @@ exports['panel/reviews/accept'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/reviews/accept';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/reviews/accept';
 		lists.reviews.get({
     _id: url.id
 }, __gj__step2);
@@ -2030,8 +2030,8 @@ exports['panel/reviews/decline'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/reviews/decline';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/reviews/decline';
 		lists.reviews.get({
     _id: url.id
 }, __gj__step2);
@@ -2057,8 +2057,8 @@ exports['panel/reviews/remove'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/reviews/remove';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/reviews/remove';
 		lists.reviews.get({
     _id: url.id
 }, __gj__step2);
@@ -2083,8 +2083,8 @@ exports['panel/offers/tomain'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/offers/tomain';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/offers/tomain';
 		lists.offers.get({
     _id: url.id
 }, __gj__step2);
@@ -2111,8 +2111,8 @@ exports['panel/offers/frommain'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/panel/offers/frommain';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/panel/offers/frommain';
 		lists.offers.get({
     _id: url.id
 }, __gj__step2);
@@ -2139,8 +2139,8 @@ exports['main/page'] = {
 			redirect = options.redirect,
 			error404 = options.error404,
 			error500 = options.error500,
-			__root = '/home/teu/projects/fish',
-			__dirname = '/home/teu/projects/fish/pages/main/page';
+			__root = '/home/teu/fish',
+			__dirname = '/home/teu/fish/pages/main/page';
 		lists.pages.get({
     url: request.url
 }, __gj__step2);

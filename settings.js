@@ -3,4 +3,4 @@ exports.preLoad = false;
 exports.minCSS = false;
 exports.minJS = false;
 exports.minHTML = false;
-exports.port = 8000;
+exports.port = 80;
